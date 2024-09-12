@@ -46,16 +46,14 @@
                           th:data-link-sort-seq="${#annotations.getOrDefault(link,'link_sort_seq',0)}"
                           th:data-link-create-time="${link.metadata.creationTimestamp}"
                         >
-                          <th:block
-                            th:with="randomBgColor = ${bgColorArray[#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()* bgColorArray.length),1,0)]}"
-                          >
+                          <th:block>
                             <a
                               class="contain"
                               th:with="randomColor = ${colorArray[#numbers.formatDecimal(T(java.lang.Math).floor(T(java.lang.Math).random()* colorArray.length),1,0)]}"
                               th:href="${link.spec.url}"
                               :key="i"
                               target="_blank"
-                              th:style="'--fcolor:'+${randomColor} + '; background:' + ${randomBgColor}"
+                              th:style="'--fcolor:'+${randomColor}"
                               rel="noopener noreferrer"
                             >
                               <div class="evan-f-left">
