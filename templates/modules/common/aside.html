@@ -33,6 +33,10 @@
             <!--        最新文章-->
             <th:block th:insert="~{modules/widgets/asideWidget :: enable_newest_post}" />
           </th:block>
+          <th:block th:case="'enable_hot_post'">
+            <!--        热门文章-->
+            <th:block th:insert="~{modules/widgets/asideWidget :: enable_hot_post}" />
+          </th:block>
           <th:block th:case="'enable_lifetime'">
             <!--        人生倒计时-->
             <th:block th:insert="~{modules/widgets/asideWidget :: enable_lifetime}" />

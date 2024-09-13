@@ -60,6 +60,9 @@
   <th:block th:fragment="enable_newest_post">
     <th:block th:replace="~{modules/macro/latest :: latest}" />
   </th:block>
+  <th:block th:fragment="enable_hot_post">
+    <th:block th:replace="~{modules/macro/aside_hot_post :: hot}" />
+  </th:block>
   <th:block th:fragment="enable_lifetime">
     <section class="joe_aside__item timelife">
       <div class="joe_aside__item-title">
